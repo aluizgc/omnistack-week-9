@@ -11,7 +11,7 @@ module.exports = {
         const targetDev = await Dev.findById(devId);
 
         if (!targetDev) {
-            return res.status(400).json({ error: 'Dev not find.' });
+            return res.status(400).json({ error: 'Dev not found.' });
         }
 
         loggedDev.dislikes.push(targetDev._id);
